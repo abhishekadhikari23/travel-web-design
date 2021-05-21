@@ -12,7 +12,9 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<Banner />
+			<main className={styles.main}>
+				<Banner />
+			</main>
 
 			<footer className={styles.footer}>
 				<a
