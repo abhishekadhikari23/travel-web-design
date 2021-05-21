@@ -1,0 +1,135 @@
+@import '../../../styles/base';
+
+.main {
+	height: 80vh;
+	background: url('../../../assets/images/banner.jpg');
+	background-position-y: 80%;
+	background-position-x: center;
+	background-size: cover;
+	position: relative;
+	z-index: 0;
+	.filter {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		background: #61534870;
+	}
+	.container {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		display: grid;
+		place-content: center;
+		z-index: 2;
+		h1 {
+			font-size: 4.5rem;
+			font-family: $heading-font;
+			color: $white-color;
+			text-align: center;
+			text-shadow: rgba(0, 0, 0, 0.250) 0.1em 0.1em 1em;
+		}
+		.subHeading {
+			font-size: $medium-font;
+			font-family: $font;
+			color: $fade-white-color;
+			text-transform: capitalize;
+			text-align: center;
+			text-shadow: rgba(0, 0, 0, 0.250) 0.1em 0.1em 1em;
+		}
+	}
+	.bookingBar {
+		position: absolute;
+		width: 60%;
+		height: 4rem;
+		background: $white-color;
+		z-index: 2;
+		border-radius: $corner-radius;
+		transform: translate(-50%, 50%);
+		left: 50%;
+		bottom: 0;
+		box-shadow: 0.1em 0.1em 1em rgba(0, 0, 0, 0.25);
+		display: grid;
+		grid-template-columns: 4fr 5fr auto;
+		align-items: center;
+		grid-template-rows: 1fr;
+		.upperText {
+			position: absolute;
+			width: 100%;
+			text-align: center;
+			color: $yellow-color;
+			font-size: 2rem;
+			top: 0;
+			font-weight: bold;
+			transform: translateY(calc(-100% - 1rem));
+		}
+		button {
+			height: 100% !important;
+			border-bottom-left-radius: 0px;
+			border-top-left-radius: 0px;
+		}
+		.options {
+			margin: 0.5rem;
+			box-shadow: inset rgba(0, 0, 0, 0.250) 0.1em 0.1em 1em;
+			height: calc(100% - 1rem);
+			border-radius: $corner-radius;
+			display: grid;
+			grid-template-columns: auto 1fr auto;
+			align-items: center;
+
+			img {
+				height: calc(100% - 0.4rem);
+				padding: 0.2rem;
+			}
+			span {
+				text-align: center;
+				color: rgba(0, 0, 0, 0.300);
+				font-weight: bold;
+			}
+			button {
+				all: initial;
+				width: 2rem;
+				margin-right: 1rem;
+				svg {
+					color: rgba(0, 0, 0, 0.300);
+					transform: rotateZ(-90deg);
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.main {
+		height: 40vh;
+		.container {
+			h1 {
+				font-size: 2.7rem;
+			}
+			.subHeading {
+				font-size: $m-medium-font;
+			}
+		}
+		.bookingBar {
+			width: 100%;
+			height: initial;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			transform: translate(-50%, 80%);
+			.upperText {
+				font-size: 1.5rem;
+			}
+			.options {
+				width: calc(100% - 1rem);
+			}
+			button {
+				border-radius: 0 0 $corner-radius $corner-radius;
+				height: 3rem !important;
+				width: 100%;
+				margin-top: 0.5rem;
+			}
+		}
+	}
+}

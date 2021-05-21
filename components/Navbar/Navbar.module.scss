@@ -1,0 +1,40 @@
+@import '../../styles/base';
+
+.main {
+	width: 100%;
+	position: absolute;
+	top: 1rem;
+	left: 0;
+	.normal {
+		position: absolute;
+		right: 1rem;
+		display: flex;
+		gap: 2rem;
+		a {
+			color: $white-color;
+			font-weight: bold;
+			font-size: 1.3rem;
+			text-decoration: none;
+			text-shadow: rgba(0, 0, 0, 0.250) 0.1em 0.1em 1em;
+			&:hover,
+			&:focus,
+			&:active {
+				text-decoration: none;
+				color: $red-color;
+			}
+		}
+	}
+	.mobile {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.main {
+		.normal {
+			display: none;
+		}
+		.mobile {
+		}
+	}
+}

@@ -1,0 +1,53 @@
+@import 'base';
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
+
+*,
+*::after,
+*::before {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	min-height: 100vh;
+	font-size: $small-font;
+	font-family: $font;
+}
+
+button {
+	background: $red-color;
+	color: $white-color;
+	font-size: $medium-font;
+	height: 3.5rem;
+	max-height: 100%;
+	padding: 0rem 2rem;
+	border: none;
+	outline: none;
+	&:hover,
+	&:active,
+	&:focus {
+		border: none;
+		outline: none;
+	}
+	border-radius: $corner-radius;
+}
+
+@media screen and (max-width: 768px) {
+	body {
+		font-size: $m-small-font;
+	}
+	button {
+		display: block;
+		font-size: $m-medium-font;
+	}
+}
+
+/*
+
+    Main heading: 4.5rem
+
+*/
